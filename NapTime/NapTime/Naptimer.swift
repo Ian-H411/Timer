@@ -8,11 +8,19 @@
 
 import Foundation
 
+protocol NapTimerDelegate: class {
+    func timerCompleted()
+    func timerStopped()
+    func timerSecondTicked()
+}
+
 class NapTimer{
     
     var timeLeft: TimeInterval?
     
     private var timer: Timer?
+    
+    weak var delegate: NapTimerDelegate?
     
     var isOn: Bool{
         //if there is not time left set it to false
@@ -26,7 +34,7 @@ class NapTimer{
             print("timer is already running")
         } else {
             self.timeLeft = time
-            self.timer = Timer(timeInterval: 1, repeats: true, block: { (_) in
+            self.timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: { (_) in
                 self.secondTicked()
             })
         }
@@ -36,7 +44,15 @@ class NapTimer{
         timeLeft = nil
         timer?.invalidate()
         print("stopped Timer")
+        delegate?.timerStopped()
         
+    }
+    
+    func timeLeftAsString() -> String {
+        let timeRemaining = Int(timeLeft ?? 3 * 60)
+        let minsRemaining = timeRemaining / 60
+        let secondsRemaining = timeRemaining - (minsRemaining * 60)
+        return String(format: "%02d : %02d", arguments: [minsRemaining, secondsRemaining])
     }
     
     
@@ -46,15 +62,12 @@ class NapTimer{
         if timeLeft > 0 {
             self.timeLeft = timeLeft - 1
             print(self.timeLeft as Any)
+            delegate?.timerSecondTicked()
         } else {
             stopTimer()
+            delegate?.timerCompleted()
         }
     }
     
-    private func timeLeftAsString() -> String {
-        let timeRemaining = Int(timeLeft ?? 3 * 60)
-        let minsRemaining = timeRemaining / 60
-        let secondsRemaining = timeRemaining - (minsRemaining * 60)
-        return String(format: "%02d : %02d", arguments: [minsRemaining, secondsRemaining])
-    }
+    
 }
