@@ -12,6 +12,7 @@
 		2585690822F9DAA800557BAE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2585690622F9DAA800557BAE /* Main.storyboard */; };
 		2585690A22F9DAA900557BAE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2585690922F9DAA900557BAE /* Assets.xcassets */; };
 		2585690D22F9DAA900557BAE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2585690B22F9DAA900557BAE /* LaunchScreen.storyboard */; };
+		2585691622F9DE8F00557BAE /* Naptimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2585691522F9DE8F00557BAE /* Naptimer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		2585690922F9DAA900557BAE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2585690C22F9DAA900557BAE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2585690E22F9DAA900557BAE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2585691522F9DE8F00557BAE /* Naptimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Naptimer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 				2585690422F9DAA800557BAE /* ViewController.swift */,
 				2585690622F9DAA800557BAE /* Main.storyboard */,
 				2585691422F9DBDB00557BAE /* assets */,
+				2585691522F9DE8F00557BAE /* Naptimer.swift */,
 			);
 			path = NapTime;
 			sourceTree = "<group>";
@@ -145,6 +148,7 @@
 			files = (
 				2585690522F9DAA800557BAE /* ViewController.swift in Sources */,
 				2585690322F9DAA800557BAE /* AppDelegate.swift in Sources */,
+				2585691622F9DE8F00557BAE /* Naptimer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
