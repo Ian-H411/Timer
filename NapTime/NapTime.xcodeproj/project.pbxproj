@@ -57,11 +57,19 @@
 				2585690222F9DAA800557BAE /* AppDelegate.swift */,
 				2585690422F9DAA800557BAE /* ViewController.swift */,
 				2585690622F9DAA800557BAE /* Main.storyboard */,
-				2585690922F9DAA900557BAE /* Assets.xcassets */,
-				2585690B22F9DAA900557BAE /* LaunchScreen.storyboard */,
-				2585690E22F9DAA900557BAE /* Info.plist */,
+				2585691422F9DBDB00557BAE /* assets */,
 			);
 			path = NapTime;
+			sourceTree = "<group>";
+		};
+		2585691422F9DBDB00557BAE /* assets */ = {
+			isa = PBXGroup;
+			children = (
+				2585690922F9DAA900557BAE /* Assets.xcassets */,
+				2585690E22F9DAA900557BAE /* Info.plist */,
+				2585690B22F9DAA900557BAE /* LaunchScreen.storyboard */,
+			);
+			path = assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -284,7 +292,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 38AN8KZ7HW;
-				INFOPLIST_FILE = NapTime/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/NapTime/assets/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -302,7 +310,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 38AN8KZ7HW;
-				INFOPLIST_FILE = NapTime/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/NapTime/assets/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

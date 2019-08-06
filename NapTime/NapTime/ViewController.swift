@@ -10,11 +10,17 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var buttonLabel: UIButton!
+    
+    @IBOutlet weak var timerLabel: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
 
-
+    @IBAction func timerButtonTapped(_ sender: UIButton) {
+    }
+    
 }
-
