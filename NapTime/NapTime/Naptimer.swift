@@ -50,4 +50,11 @@ class NapTimer{
             stopTimer()
         }
     }
+    
+    private func timeLeftAsString() -> String {
+        let timeRemaining = Int(timeLeft ?? 3 * 60)
+        let minsRemaining = timeRemaining / 60
+        let secondsRemaining = timeRemaining - (minsRemaining * 60)
+        return String(format: "%02d : %02d", arguments: [minsRemaining, secondsRemaining])
+    }
 }

@@ -16,12 +16,12 @@ class ViewController: UIViewController {
     
     //MARK: Properties
     
-    //TODO: var naptimer: naptimer()
+    var naptimer = NapTimer()
     
     //MARK: Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        naptimer.startTimer(5)
     }
 
     @IBAction func timerButtonTapped(_ sender: UIButton) {
