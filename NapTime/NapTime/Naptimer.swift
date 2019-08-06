@@ -61,7 +61,7 @@ class NapTimer{
         guard let timeLeft = timeLeft else {return}
         if timeLeft > 0 {
             self.timeLeft = timeLeft - 1
-            print(self.timeLeft as Any)
+            print(timeLeftAsString())
             delegate?.timerSecondTicked()
         } else {
             stopTimer()

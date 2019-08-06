@@ -21,10 +21,48 @@ class ViewController: UIViewController {
     //MARK: Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        naptimer.startTimer(5)
+        
     }
 
     @IBAction func timerButtonTapped(_ sender: UIButton) {
+        if naptimer.isOn{
+            naptimer.stopTimer()
+        } else {
+            naptimer.startTimer(8)
+        }
     }
+    
+    func updateLabelAndButton(){
+        timerLabel.text = naptimer.timeLeftAsString()
+        
+        var buttonTitle = ""
+        var buttonColor: UIColor = .white
+        
+        if naptimer.isOn{
+            buttonTitle = "Stop"
+            buttonColor = .red
+        } else {
+            buttonTitle = "start"
+            buttonColor = .green
+            
+        }
+        buttonLabel.setTitle(buttonTitle, for: .normal)
+        buttonLabel.setTitleColor(buttonColor, for: .normal)
+    }
+    
+}
+extension ViewController: NapTimerDelegate{
+    func timerCompleted() {
+        
+    }
+    
+    func timerStopped() {
+        updateLabelAndButton()
+    }
+    
+    func timerSecondTicked() {
+        updateLabelAndButton()
+    }
+    
     
 }
